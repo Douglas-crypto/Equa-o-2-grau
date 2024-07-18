@@ -11,28 +11,30 @@ int main() {
   //variáel delta
   int delta;
   //variáel x1
-  int x1;
+  float x1;
   //variáel x2
-  int x2;
+  float x2;
    
    //Informar valor de A
    printf("A = ");
    //Armazenar valor de A
-   scanf("%f", &A);
+   scanf("%d", &A);
    
    //Informar valor de B
    printf("B = ");
    //Armazenar valor de B
-   scanf("%f", &B);
+   scanf("%d", &B);
    
    //Informar valor de C
    printf("C = ");
    //Armazenar valor de C
-   scanf("%f", &C);
+   scanf("%d", &C);
    
    //Se a == 0, "Não é uma equação de segundo grau"
    if (A == 0){
        printf("Não é uma equação de segundo grau");
+   //Exibir valor de delta
+        printf("O valor de delta é de: %d\n", delta);
        return 0;
    }
    
@@ -41,8 +43,10 @@ int main() {
    
    //Se delta for < 0, "Não existem raízes reais"
    if (delta < 0){
-       printf("Não existem raízes reais");
-       return 0;
+       printf("Não existem raízes reais\n");
+   //Exibir valor de delta
+        printf("O valor de delta é de: %d\n", delta);
+        return 0;
    }
    
    //Se delta for == 0 exibe a raíz única x1
@@ -50,18 +54,23 @@ int main() {
    //Calcular x1, - B +sqrt((delta) / 2 * A)
        x1 = (- B +sqrt((delta) / 2 * A));
    //Exibir x1
-   printf("A raiz única é : ", x1);
+   printf("A raiz única é : %d\n", x1);
+   //Exibir valor de delta
+        printf("O valor de delta é de: %d\n", delta);
        return 0;
    }
-  // Se delta for maior que 0, exibe as duas raízes 
+   
+   // Se delta for maior que 0, exibe as duas raízes 
     else {
-        // Calcular x1 e x2
+        // Calcular x1
         x1 = (-B + sqrt(delta)) / (2.0 * A);
+        // Calcular x2
         x2 = (-B - sqrt(delta)) / (2.0 * A);
         // Exibir x1
         printf("O valor de x1 é: %.2f\n", x1);
         // Exibir x2
         printf("O valor de x2 é: %.2f\n", x2);
+         printf("O valor de delta é de: %d\n", delta);
     }
 
     return 0;
