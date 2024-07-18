@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+   
+  //variáel A
+  int A;
+  //variáel B
+  int B;
+  //variáel C
+  int C;
+  //variáel delta
+  int delta;
+  //variáel x1
+  int x1;
+  //variáel x2
+  int x2;
+   
+   //Informar valor de A
+   printf("A = ");
+   //Armazenar valor de A
+   scanf("%f", &A);
+   
+   //Informar valor de B
+   printf("B = ");
+   //Armazenar valor de B
+   scanf("%f", &B);
+   
+   //Informar valor de C
+   printf("C = ");
+   //Armazenar valor de C
+   scanf("%f", &C);
+   
+   //Se a == 0, "Não é uma equação de segundo grau"
+   if (A == 0){
+       printf("Não é uma equação de segundo grau");
+       return 0;
+   }
+   
+   //Calcular delta, delta = B ao quadrado - 4 * A * C
+   delta = pow(B, 2) - 4 * A * C;
+   
+   //Se delta for < 0, "Não existem raízes reais"
+   if (delta < 0){
+       printf("Não existem raízes reais");
+       return 0;
+   }
+   
+   //Se delta for == 0 exibe a raíz única x1
+   else if (delta == 0){
+   //Calcular x1, - B +sqrt((delta) / 2 * A)
+       x1 = (- B +sqrt((delta) / 2 * A));
+   //Exibir x1
+   printf("A raiz única é : ", x1);
+       return 0;
+   }
+   
+   //Se delta for maior que 0 exibe as duas raízes 
+   else   (delta > 0);{
+   // Exibir x1
+   printf("O valor de x1 é de: ", x1);
+   // Exibir x2
+   printf("O valor de x2 é de: ", x2);
+   
+   }
+    return 0;
+}
